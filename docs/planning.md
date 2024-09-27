@@ -19,9 +19,10 @@
 
 ### Application Flow Chart
 
-[Link to Flow Diagram](https://miro.com/app/board/uXjVPexfrAA=/)
+[Link to Flow Diagram - TBD](#)
 
 ## References ( Documentation used for quick access )
+- TBD
 
 ## Project Planning
 
