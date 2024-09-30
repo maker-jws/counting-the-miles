@@ -122,10 +122,16 @@ Features I have completed:
 ### Day 1
 
 - boilerplate - create repo
-  - create repo
-  - initialize node project
-  - install dependencies
-  - etc.
+  - create repo - DONE
+  - initialize node project - DONE
+  - install base dependencies - DONE
+  - populate directories (controllers, views, models, middleware, utils)- DONE
+  - populated server.js -
+    - application imports + listener - DONE
+    - import db connection - DONE
+    - set view engine - DONE
+    - import and mount express middleware (LU: Isolated express-specific middleware to discrete module) - DONE
+    - build test route - DONE
 
 ### Day 2
 
