@@ -12,7 +12,7 @@
 - route: routeSchema
 - heroImage: String (default: "TBD")
 - category: String (enum: ['road', 'mountain', 'gravel', 'touring'])
-- isPublic: Boolean (default: true)
+- isPublic: Boolean (default: false)
 - createdAt: Mongoose
 - updatedAt: Mongoose
 
@@ -20,6 +20,7 @@
 
 - \_id: ObjectId
 - name: String \*\*\*
+- description: String \*\*\*
 - challengeRating: Number [0-5]
 - routeDist: Number \*\*\*
 - unit: String (enum: ['km', 'mi']) \*\*\*
@@ -66,12 +67,12 @@ Each build feature is the 1st level bullet points with subtasks below. Substeps 
   - create repo
   - initialize node project
   - install dependencies
-  - etc.
-- Build landing page (homepage)
-- Connect to database
-  - install dependencies
+  - Connect to database
   - setup .env and .gitignore
   - add DB connection string
+  - etc.
+- Build Primary And Second Models
+- Build landing page (homepage)
 - Build the Ride model
 - Build the new Ride page
 - Create a Ride
@@ -105,12 +106,6 @@ Each build feature is the 1st level bullet points with subtasks below. Substeps 
 
 What I am currently working on:
 
-- project setup / boilerplate
-  - create repo
-  - initialize node project
-  - install dependencies
-  - etc.
-
 ---
 
 ## Done
@@ -120,6 +115,10 @@ Features I have completed:
 - planning + boilerplate - populate `planning.md`
 
 ### Day 1
+
+- Revisit and populate draft ERD in `planning.md`
+
+### Day 2
 
 - boilerplate - create repo
   - create repo - DONE
@@ -132,8 +131,6 @@ Features I have completed:
     - set view engine - DONE
     - import and mount express middleware (LU: Isolated express-specific middleware to discrete module) - DONE
     - build test route - DONE
-
-### Day 2
 
 ### Day 3
 
