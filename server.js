@@ -8,6 +8,7 @@ require('./utils/db.connection') // establish DB connection in its own file - wh
 // APPLICATION CONFIGURATION
 const app = express()
 const { PORT } = process.env
+const { ridesCtrl } = require('./controllers')
 app.set('view engine', 'ejs')
 
 // MIDDLEWARE
@@ -16,11 +17,12 @@ app.use(expressDefaults)
 // ROUTING
 // Homepage
 app.get('/', (req, res) => {
-  res.send('homepage')
+  res.render('index')
 })
 
 // Auth Controller
 // Rides Controller
+app.use('/rides', ridesCtrl)
 // Routes Controller
 
 // CONTROLLERS

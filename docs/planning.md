@@ -71,9 +71,10 @@ Each build feature is the 1st level bullet points with subtasks below. Substeps 
   - setup .env and .gitignore
   - add DB connection string
   - etc.
-- Build Primary And Second Models
+- Build Primary And Second Models X
+  - Build the Ride model - X
+  - Define a Route Schema - X
 - Build landing page (homepage)
-- Build the Ride model
 - Build the new Ride page
 - Create a Ride
 - Build the Ride index page
@@ -81,7 +82,6 @@ Each build feature is the 1st level bullet points with subtasks below. Substeps 
 - Build the Edit Ride page
 - Delete a Ride
 - Update a Ride
-- Define a Route Schema
 - Build a Route Association Form
 - Populate Route Associations Controller
 - Rendering Route Info on Show Page
@@ -112,8 +112,6 @@ What I am currently working on:
 
 Features I have completed:
 
-- planning + boilerplate - populate `planning.md`
-
 ### Day 1
 
 - Revisit and populate draft ERD in `planning.md`
@@ -134,7 +132,20 @@ Features I have completed:
 
 ### Day 3
 
+- Build the Ride model
+
 ### Day 4
+
+- Build landing page (homepage)
+
+  - populate headers
+  - populate partials
+  - populate global styles and base css
+
+- Build the new Ride page
+  - create form
+- Create a Ride
+  - write custome middleware to clean up request body (empty fields and convert checkbox values to boolean)
 
 ### Day 5
 

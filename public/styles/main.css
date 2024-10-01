@@ -1,0 +1,45 @@
+:root {
+  inherits: all;
+}
+
+.main {
+  background-color: var(--color-base);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--grid-gap);
+  width: 90vw;
+  max-width: var(--max-width);
+  margin: 4rem auto;
+  padding: 6rem 0;
+}
+.btn {
+  /*   --color-button-default: var(--color-accent: );
+  --color-button-border: var(--color-base);
+  --color-button-text: #fff;
+ */
+
+  border: var(--border-width) solid var(--color-button-border);
+  border-radius: var(--border-radius-small);
+  margin-top: 2rem;
+}
+.btn-primary {
+  font-size: var(--font-size-medium);
+  background-color: rgb(142, 142, 142);
+  padding: 1rem 2rem;
+  color: var(--color-button-text);
+}
+
+.btn-primary:active,
+.btn-primary:hover {
+  background-color: var(--color-accent);
+}
+
+.btn-secondary {
+  font-size: var(--font-size-medium);
+  background-color: var(--color-accent);
+  padding: 1rem 2rem;
+  color: var(--color-button-text);
+}

@@ -1,0 +1,52 @@
+<%- include("../partials/head.ejs", {title: "Track a Ride" }) %>
+  <section class="container">
+    <h2>Add Ride Details</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis similique quia, at neque ea harum sequi
+      iusto
+      fuga molestias explicabo maiores? Voluptatum placeat ullam aut fugiat, expedita magnam maiores consequatur?</p>
+    <form action="/rides" method="POST">
+      <% const options=['city', 'road' , 'mountain' , 'gravel' , 'touring' ] %>
+        <legend>
+          <label for="rideDist">How far did you ride?</label>
+          <input type="number" name="rideDist" id="rideDist" required min="0" step=".05" value="0">
+        </legend>
+        <legend>
+          <label for="unit">Ride Units</label>
+          <select name="unit" id="unit" required>
+            <option value="mi">Imperial (miles)</option>
+            <option value="km">Metric (km)</option>
+          </select>
+        </legend>
+        <h3>Additional Details</h3>
+        <legend>
+          <label for="isPublic">Make Public?</label>
+          <input type="checkbox" name="isPublic" id="isPublic" checked>
+        </legend>
+        <legend>
+          <label for="category">Ride Type</label>
+          <select name="category" id="category" required>
+            <option value="" selected>Select the most category</option>
+            <% options.forEach(element=> { %>
+              <option value="<%=element%>">
+                <%=element[0].toUpperCase()+element.substring(1)%>
+              </option>
+              <% }) %>
+          </select>
+        </legend>
+        <button class='btn btn-primary' type="submit">Submit</button>
+    </form>
+  </section>
+
+  <%- include('../partials/footer.ejs') %>
+
+    <!-- ### Ride
+
+- \_id: ObjectId
+- rideDist: Number \*\*\*
+- unit: String (enum: ['km', 'mi']) \*\*\*
+- route: routeSchema
+- heroImage: String (default: "TBD")
+- category: String (enum: ['road', 'mountain', 'gravel', 'touring'])
+- isPublic: Boolean (default: false)
+- createdAt: Mongoose
+- updatedAt: Mongoose -->
