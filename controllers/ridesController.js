@@ -13,7 +13,7 @@ router.post('/', cleanRequestBody, async (req, res) => {
     await Ride.create(req.body)
     res.redirect('/rides')
   } catch (err) {
-    res.redirect('/')
+    res.redirect('/?errorMsg=create-error')
   }
 })
 

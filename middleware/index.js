@@ -13,4 +13,5 @@ const cleanEmptyFields = (req, res, next) => {
 module.exports = {
   expressDefaults: require('./express'),
   cleanRequestBody: cleanEmptyFields,
+  handleErrors: require('./errors'),
 }
