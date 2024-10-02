@@ -1,13 +1,18 @@
-:root {
-  inherits: all;
-}
-
 .main {
   background-color: var(--color-base);
 }
 
-.global-footer {
+.global-footer,
+.global-navigation {
+  /* TODO - migrate flex functionlity to utility class and update header partial */
   display: flex;
+  align-items: center;
+  background-color: var(--color-base);
+  min-height: calc(6 * var(--font-size-medium));
+  padding: var(--font-size-medium);
+}
+
+.global-footer {
   justify-content: center;
 }
 
@@ -74,6 +79,7 @@
 }
 
 /* RIDE - INDEX PAGE */
+/* TODO review EJS for classses - card / index for GRID layout*/
 
 /* RIDE - EDIT PAGE */
 .ride-header-preview {

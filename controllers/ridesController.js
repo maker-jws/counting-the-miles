@@ -21,7 +21,6 @@ router.post('/', cleanRequestBody, async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const allPublicRides = await Ride.find({ isPublic: true })
-    console.log(allPublicRides)
     res.render('rides/index', { rides: allPublicRides })
   } catch (err) {
     res.redirect('/?errorMsg=create-error')
@@ -40,7 +39,14 @@ router.get('/:rideId', async (req, res) => {
 })
 
 // DELETE
-router.delete('/:rideId', (req, res) => res.send('rides delete route'))
+router.delete('/:rideId', async (req, res) => {
+  try {
+    const deletedRide = await Ride.findByIdAndDelete(req.params.rideId)
+    res.redirect('/rides')
+  } catch (err) {
+    res.redirect(`/rides/${req.params.rideId}/?errorMsg=create-error`)
+  }
+})
 
 // EDIT -
 router.get('/:rideId/edit', async (req, res) => {
@@ -53,6 +59,13 @@ router.get('/:rideId/edit', async (req, res) => {
 })
 
 // UPDATE
-router.put('/:rideId', (req, res) => res.send('rides update route'))
+router.put('/:rideId', cleanRequestBody, async (req, res) => {
+  try {
+    const updatedRide = await Ride.findByIdAndUpdate(req.params.rideId, req.body)
+    res.redirect(`/rides/${updatedRide._id}`)
+  } catch (err) {
+    res.redirect(`/rides/${req.params.rideId}/?errorMsg=create-error`)
+  }
+})
 
 module.exports = router

@@ -25,14 +25,13 @@
     <a href="/rides/new">Add Ride +</a>
   </nav>
 
-  <% console.log(headerStyle) %>
-    <header class="hero-header">
-      <img class="hero-header-image" src="<%=imageForHeader%>" />
-      <h1>
-        <%= typeof title !=='undefined' ? title: "Welcome" %>
-      </h1>
-    </header>
-    <main class="main"></main>
+  <header class="hero-header">
+    <img class="hero-header-image" src="<%=imageForHeader%>" />
+    <h1>
+      <%= typeof title !=='undefined' ? title: "Welcome" %>
+    </h1>
+  </header>
+  <main class="main"></main>
 </body>
 
 </html>

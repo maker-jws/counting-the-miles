@@ -32,7 +32,7 @@ const createRide = async () => {
     isPublic: true,
   }
   const newRide = await Ride.create(rideData)
-  console.log('New todo:', newRide)
+  console.log('New ride:', newRide)
 }
 
 const findRides = async (query = {}) => {
