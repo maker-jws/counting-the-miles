@@ -6,25 +6,54 @@
   background-color: var(--color-base);
 }
 
+.global-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-header {
+  height: 30vmin;
+  min-height: 30rem;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+}
+
+.hero-header>h1 {
+  filter: invert(1);
+  background-color: rgba(255, 255, 255, 1);
+  padding: var(--font-size-medium);
+  margin-top: calc(3* var(--font-size-medium));
+  margin-left: var(--font-size-medium);
+  align-self: flex-start;
+}
+
+.hero-header-image {
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+  justify-self: center;
+  align-self: end;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   gap: var(--grid-gap);
   width: 90vw;
   max-width: var(--max-width);
-  margin: 4rem auto;
-  padding: 6rem 0;
+  margin: 1rem auto;
+  padding: 2rem 0;
 }
+
 .btn {
-  /*   --color-button-default: var(--color-accent: );
-  --color-button-border: var(--color-base);
-  --color-button-text: #fff;
- */
 
   border: var(--border-width) solid var(--color-button-border);
   border-radius: var(--border-radius-small);
   margin-top: 2rem;
 }
+
 .btn-primary {
   font-size: var(--font-size-medium);
   background-color: rgb(142, 142, 142);
@@ -42,4 +71,12 @@
   background-color: var(--color-accent);
   padding: 1rem 2rem;
   color: var(--color-button-text);
+}
+
+/* RIDE - INDEX PAGE */
+
+/* RIDE - EDIT PAGE */
+.ride-header-preview {
+  display: block;
+  max-height: 10vh;
 }

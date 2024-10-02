@@ -1,0 +1,43 @@
+<%- include("../partials/head.ejs", {title: "Edit a Ride" , img: ride.heroImage }) %>
+  <section class="container">
+    <h2>Modify Your Ride</h2>
+    <form action="/rides/<%=ride._id%>?_method=PUT" method="POST">
+      <% const options=['city', 'road' , 'mountain' , 'gravel' , 'touring' ] %>
+        <legend>
+          <label for="rideDist">Need to adjust your distance?</label>
+          <input type="number" name="rideDist" id="rideDist" required min="0" step=".05" value="<%=ride.rideDist%>">
+        </legend>
+        <legend>
+          <label for="heroImage">Update the ride header?</label>
+          <img class="ride-header-preview" src="<%=ride.heroImage%>" />
+          <input type="tet" name="heroImage" id="heroImage" pattern="([^\\s]+(\\.(?i)(jpe?g|png|gif|bmp))$)"
+            value="<%=ride.heroImage%>">
+        </legend>
+        <legend>
+          <label for="unit">Ride Units</label>
+          <select name="unit" id="unit" required>
+            <option value="mi" <%=ride.unit==="mi" ? "selected" : "" %> >Imperial (miles)</option>
+            <option value="km" <%=ride.unit==="km" ? "selected" : "" %> >Metric (km)</option>
+          </select>
+        </legend>
+        <h3>Customize this Ride</h3>
+        <legend>
+          <label for="isPublic">Is this ride shareable?</label>
+          <input type="checkbox" name="isPublic" id="isPublic" <%=ride.isPublic===true ? "checked" : "" %>>
+        </legend>
+        <legend>
+          <label for="category">Ride Type</label>
+          <select name="category" id="category" required>
+            <option value="" selected>Select the most relevant category</option>
+            <% options.forEach(element=> { %>
+              <option value="<%=element%>" <%=ride.category===element ? "selected" : "" %>>
+                <%=element[0].toUpperCase()+element.substring(1)%>
+              </option>
+              <% }) %>
+          </select>
+        </legend>
+        <button class='btn btn-primary' type="submit">Edit Ride</button>
+    </form>
+  </section>
+
+  <%- include('../partials/footer.ejs') %>
