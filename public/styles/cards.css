@@ -1,0 +1,48 @@
+/* index list card */
+.card-grid-group{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--grid-gap)
+}
+.card{
+    box-shadow: 0px 1rem 1rem rgba(0,0,0, .1);
+    padding: var(--font-size-x-large);
+    border-radius: var(--border-radius-small);
+}
+
+.index-card{
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.index-card div:first-of-type{
+    display:flex;
+    align-items: center;
+    gap: calc(.5*var(--grid-gap));
+}
+
+.index-card div:last-of-type{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    /* LU - nested CSS  */
+}
+.index-card a{
+    padding: 1rem;
+    border: .5px solid var(--color-accent);
+    border-radius: var(--border-radius-x-small)
+}
+.index-card a:hover::after{
+    content: " > "
+}
+
+.index-card-logo{
+    width: var(--font-size-xx-large);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--color-accent)
+}
+
+/* edit modal */    
+

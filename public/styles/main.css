@@ -1,19 +1,6 @@
 .main {
-  background-color: var(--color-base);
-}
-
-.global-footer,
-.global-navigation {
-  /* TODO - migrate flex functionlity to utility class and update header partial */
-  display: flex;
-  align-items: center;
-  background-color: var(--color-base);
-  min-height: calc(6 * var(--font-size-medium));
-  padding: var(--font-size-medium);
-}
-
-.global-footer {
-  justify-content: center;
+  flex: 1;
+  background-color: var(--color-background);
 }
 
 .hero-header {
@@ -25,11 +12,11 @@
   align-items: flex-start;
 }
 
-.hero-header>h1 {
+.hero-header > h1 {
   filter: invert(1);
   background-color: rgba(255, 255, 255, 1);
   padding: var(--font-size-medium);
-  margin-top: calc(3* var(--font-size-medium));
+  margin-top: calc(3 * var(--font-size-medium));
   margin-left: var(--font-size-medium);
   align-self: flex-start;
 }
@@ -53,7 +40,6 @@
 }
 
 .btn {
-
   border: var(--border-width) solid var(--color-button-border);
   border-radius: var(--border-radius-small);
   margin-top: 2rem;

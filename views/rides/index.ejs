@@ -1,15 +1,23 @@
-<%- include("../partials/head.ejs", {title: "Get Inspired - Rides Portal" }) %>
+<%- include("../partials/head.ejs", {title: "Rides Portal - Get Inspired" }) %>
   <section class="container">
     <h2>Track Your Rides</h2>
     <div class="card-grid-group">
       <% rides.forEach(ride=> { %>
         <div class="card index-card">
-          <h3>
-            <%=ride._id%>
-          </h3>
-          <p>Lorem Ipsum</p>
-          <hr />
-          <a class='card-cta' href="/rides/<%=ride._id%>">Details</a>
+          <div >
+            <!-- TODO add grid class for card details  -->
+            <div class="index-card-logo"></div>
+            <h3>
+              <%=ride.category[0].toUpperCase()+ride.category.substring(1)%> Riding
+            </h3>
+            <p><%=ride.rideDist%> <%=ride.unit%></p>
+            <p><%=ride.createdAt.toString().substring(0,15)%></p>
+            <!-- TODO import moment into template -> format the ride createdAt property -->
+          </div>
+          
+          <div>
+            <a class='card-cta' href="/rides/<%=ride._id%>">Details</a>
+          </div>
         </div>
         <% }) %>
     </div>

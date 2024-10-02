@@ -1,4 +1,4 @@
-/* Source https://gist.github.com/malarkey/3e40f4ec27f8f002b220994443a70acf */
+/* CSS Source: https://gist.github.com/malarkey/3e40f4ec27f8f002b220994443a70acf */
 
 :root {
   --font-family: 'Helvetica', serif;
@@ -33,8 +33,8 @@
   --color-text-link-hover: #9d7ad4;
   --color-text-link-visited: var(--color-text-link);
 
-  --color-button-default: var(--color-accent: );
-  --color-button-border: var(--color-base);
+  --color-button-default: var(--color-background);
+  --color-button-border: var(--color-accent);
   --color-button-text: #fff;
 
   --border-radius-x-small: 0.25rem;
@@ -83,6 +83,11 @@ body {
   background-color: (var(--color-background));
   font-weight: var(--font-weight);
   color: var(--color-text-default);
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 
 h1,
@@ -101,16 +106,20 @@ sub {
 }
 
 h1 {
+  font-size: var(--font-size-x-large);
   font-weight: var(--font-weight-black);
 }
 h2,
 h3 {
+  font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
 }
 
-a {
+a{
   color: var(--color-text-link);
+  font-size: var(--font-size-small);
 }
+
 a:hover {
   color: var(--color-text-link-hover);
 }
