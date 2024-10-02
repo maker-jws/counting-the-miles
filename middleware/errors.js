@@ -5,7 +5,6 @@ const options = {
 
 const errorParser = (req, res, next) => {
   let errorState = req.query.errorMsg
-  console.log('testing error', errorState)
   if (errorState) {
     res.locals.error = options[errorState]
   } else {

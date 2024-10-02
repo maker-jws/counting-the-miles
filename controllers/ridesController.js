@@ -21,7 +21,6 @@ router.post('/', cleanRequestBody, async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const allPublicRides = await Ride.find({ isPublic: true })
-    console.log(allPublicRides)
     res.render('rides/index', { rides: allPublicRides })
   } catch (err) {
     res.redirect('/?errorMsg=create-error')
