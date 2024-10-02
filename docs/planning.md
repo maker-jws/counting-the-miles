@@ -106,12 +106,10 @@ Each build feature is the 1st level bullet points with subtasks below. Substeps 
 
 What I am currently working on:
 
----
+- Delete a Ride
+- Update a Ride
 
-- Build the Ride index page
-- Build the Ride Show page
-- Build the Edit Ride page
-- Add Additional header style partial and fallback hero image
+---
 
 ## Done
 
@@ -153,6 +151,11 @@ Features I have completed:
   - write custome middleware to clean up request body (empty fields and convert checkbox values to boolean)
 
 ### Day 5
+
+- Build the Ride index page
+- Build the Ride Show page
+- Build the Edit Ride page
+- Add Additional header style partial and fallback hero image
 
 ### Day 6
 
