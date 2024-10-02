@@ -108,6 +108,11 @@ What I am currently working on:
 
 ---
 
+- Build the Ride index page
+- Build the Ride Show page
+- Build the Edit Ride page
+- Add Additional header style partial and fallback hero image
+
 ## Done
 
 Features I have completed:

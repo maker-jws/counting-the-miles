@@ -1,5 +1,5 @@
 const express = require('express')
-const { expressDefaults } = require('./middleware')
+const { expressDefaults, handleErrors } = require('./middleware')
 
 // SERVICES & CONFIGURATION
 require('dotenv').config()
@@ -13,6 +13,7 @@ app.set('view engine', 'ejs')
 
 // MIDDLEWARE
 app.use(expressDefaults)
+app.use(handleErrors)
 
 // ROUTING
 // Homepage

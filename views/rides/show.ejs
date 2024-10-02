@@ -1,0 +1,31 @@
+<%- include("../partials/head.ejs", {title: "Review a Ride" , img: ride.heroImage }) %>
+  <section class="container">
+    <div class="ride-details-content">
+      <div class="ride-details-heading">
+        <h2>Ride Date: <%=new Date(ride.createdAt).toString().slice(3,15)%>
+            <!-- TODO: incorporate date parsing library Momentjs  -->
+        </h2>
+      </div>
+
+      <h3 for="rideDist">Ride Details</h3>
+      <p>Distance: <%=ride.rideDist%>
+          <%=ride.unit%>
+      </p>
+      <p>Ride Type: <%=ride.category[0].toUpperCase()+ride.category.slice(1)%>
+      </p>
+    </div>
+    <nav><a href="/rides">Back</a> | <a href="/rides/<%=ride._id%>/edit">Edit</a></nav>
+  </section>
+
+  <%- include('../partials/footer.ejs') %>
+
+    <!-- 
+- \_id: ObjectId
+- rideDist: Number \*\*\*
+- unit: String (enum: ['km', 'mi']) \*\*\*
+- route: routeSchema
+- heroImage: String (default: "TBD")
+- category: String (enum: ['road', 'mountain', 'gravel', 'touring'])
+- isPublic: Boolean (default: false)
+- createdAt: Mongoose
+- updatedAt: Mongoose -->
