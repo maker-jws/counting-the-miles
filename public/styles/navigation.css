@@ -1,0 +1,52 @@
+/* header */
+
+.global-footer,
+.global-navigation {
+  /* TODO - migrate flex functionlity to utility class and update header partial */
+  display: flex;
+  align-items: center;
+  background-color: var(--color-base);
+  min-height: calc(4 * var(--font-size-medium));
+  padding: var(--font-size-medium);
+}
+.global-navigation{
+    gap: var(--grid-gap)
+}
+
+.nav-brand-icon{
+    height: var(--font-size-xx-large);
+    border-radius: var(--border-radius-small);
+    padding: .2rem; 
+    border: var(--border-width-thin) solid var(--color-text-default);
+}
+
+.nav-link,.nav-cta-btn{
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.nav-cta-btn{
+    border: 2px solid var(--color-button-border);
+    border-radius: var(--border-radius-small);
+    padding: var(--font-size-xx-small) var(--font-size-small);
+    color: var(--color-text-default);
+    /* flex-grow: 1; */
+    margin-left: auto;
+    /* TODO: revisit font line-height for vertically centered text */
+}
+.nav-cta-btn:hover{
+    background-color: var(--color-button-border);
+    color: #fff;
+}
+
+/* footer */
+.global-footer {
+  justify-content: center;
+}
+ 
+
+
+/* media queries */

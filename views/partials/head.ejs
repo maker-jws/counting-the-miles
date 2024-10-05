@@ -10,19 +10,17 @@
   <link rel="stylesheet" href="/styles/global.css" />
   <link rel="stylesheet" href="/styles/utils.css" />
   <link rel="stylesheet" href="/styles/main.css" />
-
+  <link rel="stylesheet" href="/styles/navigation.css" />
+  <link rel="stylesheet" href="/styles/cards.css" />
   <% const headerFallback="https://images.unsplash.com/photo-1474552226712-ac0f0961a954" %>
     <% const imageForHeader=typeof img !=='undefined' ? img : headerFallback %>
-      <% const headerStyle=`style="background:url(${imageForHeader});" `%>
 </head>
 
 <body>
   <nav class="global-navigation">
-    <div>Brand Icon</div>
-    <a href="/auth/sign-in">Login</a>
-    <a href="/auth/sign-up">Register</a>
-    <a href="/rides">View Rides</a>
-    <a href="/rides/new">Add Ride +</a>
+    <img class="nav-brand-icon" src="/images/logo.png" alt="CTM-brand-icon">
+    <a class="nav-link" href="/rides">View Rides</a>
+    <a class="nav-cta-btn" href="/rides/new">Add Ride +</a>
   </nav>
 
   <header class="hero-header">
@@ -31,7 +29,4 @@
       <%= typeof title !=='undefined' ? title: "Welcome" %>
     </h1>
   </header>
-  <main class="main"></main>
-</body>
-
-</html>
+  <main class="main">

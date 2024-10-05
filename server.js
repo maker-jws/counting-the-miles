@@ -1,5 +1,5 @@
 const express = require('express')
-const { expressDefaults, handleErrors } = require('./middleware')
+const { expressDefaults, handleErrors, moment } = require('./middleware')
 
 // SERVICES & CONFIGURATION
 require('dotenv').config()
@@ -9,15 +9,19 @@ require('./utils/db.connection') // establish DB connection in its own file - wh
 const app = express()
 const { PORT } = process.env
 const { ridesCtrl } = require('./controllers')
+
+const { Ride } = require('./models')
 app.set('view engine', 'ejs')
 
 // MIDDLEWARE
 app.use(expressDefaults)
+app.use(moment) // provides global moment dependency for templates
+// TODO - refactor library to recommended substitute
 app.use(handleErrors)
 
 // ROUTING
 // Homepage
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
   res.render('index')
 })
 

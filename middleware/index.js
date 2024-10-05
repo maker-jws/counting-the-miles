@@ -14,4 +14,5 @@ module.exports = {
   expressDefaults: require('./express'),
   cleanRequestBody: cleanEmptyFields,
   handleErrors: require('./errors'),
+  moment: require('./moment')
 }
