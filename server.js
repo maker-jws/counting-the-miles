@@ -1,5 +1,5 @@
 const express = require('express')
-const { expressDefaults, handleErrors } = require('./middleware')
+const { expressDefaults, handleErrors, moment } = require('./middleware')
 
 // SERVICES & CONFIGURATION
 require('dotenv').config()
@@ -15,6 +15,8 @@ app.set('view engine', 'ejs')
 
 // MIDDLEWARE
 app.use(expressDefaults)
+app.use(moment) // provides global moment dependency for templates
+// TODO - refactor library to recommended substitute
 app.use(handleErrors)
 
 // ROUTING

@@ -4,18 +4,23 @@
     <div class="card-grid-group">
       <% rides.forEach(ride=> { %>
         <div class="card index-card">
-          <div >
-            <!-- TODO add grid class for card details  -->
+          <div class="index-card-content-wrap">
             <div class="index-card-logo"></div>
-            <h3>
-              <%=ride.category[0].toUpperCase()+ride.category.substring(1)%> Riding
-            </h3>
-            <p><%=ride.rideDist%> <%=ride.unit%></p>
-            <p><%=ride.createdAt.toString().substring(0,15)%></p>
-            <!-- TODO import moment into template -> format the ride createdAt property -->
+            <div class="index-card-content">
+              <h3>
+                <%=ride.category[0].toUpperCase()+ride.category.substring(1)%> Riding
+              </h3>
+              <p>
+                <%=ride.rideDist%> <span>
+                    <%=ride.unit%>
+                  </span>
+              </p>
+              <p>
+                <%=moment(ride.createdAt).fromNow();%>
+              </p>
+            </div>
           </div>
-          
-          <div>
+          <div class="index-card-link-tags">
             <a class='card-cta' href="/rides/<%=ride._id%>">Details</a>
           </div>
         </div>
